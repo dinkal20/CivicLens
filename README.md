@@ -1,6 +1,6 @@
-# 🏙️ CivicFix – Civic Issue Reporting System
+# 🏙️ CivicLens – Civic Issue Reporting System
 
-CivicFix is a web-based civic issue reporting and management platform that allows citizens to report public infrastructure and community-related issues. It helps streamline communication between citizens, administrators, and departments to support efficient issue management.
+CivicLens is a web-based civic issue reporting and management platform that allows citizens to report public infrastructure and community-related issues. It helps streamline communication between citizens, administrators, and departments to support efficient issue management.
 
 ## ✨ Features
 
@@ -38,11 +38,12 @@ CivicFix is a web-based civic issue reporting and management platform that allow
 ## 📂 Project Structure
 
 ```text
-CivicFix/
+CivicLens/
 │
 ├── app.py
 ├── requirements.txt
 ├── .env
+├── .gitignore
 │
 ├── templates/
 │   ├── index.html
@@ -69,13 +70,20 @@ git clone YOUR_REPOSITORY_LINK
 ### 2. Navigate to the Project Folder
 
 ```bash
-cd CivicFix
+cd CivicLens
 ```
 
 ### 3. Create a Virtual Environment (Optional)
 
 ```bash
 python -m venv venv
+```
+
+Activate it:
+
+**Windows:**
+```bash
+venv\Scripts\activate
 ```
 
 ### 4. Install Dependencies
@@ -86,11 +94,17 @@ pip install -r requirements.txt
 
 ### 5. Configure Environment Variables
 
-Create a `.env` file and add your MongoDB connection details.
+Create a `.env` file in the root directory of CivicLens and add the following:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
+SECRET_KEY=your_flask_secret_key
 ```
+
+- `MONGO_URI`: MongoDB Atlas connection string containing your database credentials.
+- `SECRET_KEY`: Secret key used by Flask for session security.
+
+**Important:** Never upload your actual `.env` file to GitHub because it contains sensitive credentials.
 
 ### 6. Run the Application
 
@@ -111,7 +125,7 @@ Open the application in your browser using the local URL displayed in the termin
 
 ## 🎯 Project Objective
 
-The main objective of CivicFix is to provide a centralized digital platform for reporting and managing civic issues, improving communication between citizens and authorities and supporting more organized issue resolution.
+The main objective of CivicLens is to provide a centralized digital platform for reporting and managing civic issues, improving communication between citizens and authorities and supporting more organized issue resolution.
 
 ## 👩‍💻 Developed By
 
